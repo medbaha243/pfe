@@ -1,0 +1,36 @@
+<div class="d-flex">
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
+        <li ngbNavItem="top">
+            <a ngbNavLink><img src="../../../../assets/images/group.png"width="25"height="20"> </a>
+            <ng-template ngbNavContent>
+               <app-info></app-info>
+            </ng-template>
+        </li>
+        <li ngbNavItem="first">
+            <a ngbNavLink><img src="../../../../assets/images/add-group.svg"width="25"height="35"></a>
+            <ng-template ngbNavContent>
+                <app-adduser></app-adduser>
+            </ng-template>
+        </li>
+        <li ngbNavItem="middle">
+            <a ngbNavLink><img src="../../../../assets/images/alerte.png"width="25"height="25"></a>
+            <ng-template ngbNavContent >
+                <app-message></app-message>
+            </ng-template>
+        </li>
+        <li ngbNavItem="bottom">
+            <a ngbNavLink><img src="../../../../assets/images/invoice.png"width="25"height="35"></a>
+            <ng-template ngbNavContent>
+               <app-facture></app-facture>
+            </ng-template>
+        </li>
+        <li ngbNavItem="last">
+            <a ngbNavLink><img src="../../../../assets/images/invoice2.png"width="25"height="35"></a>
+            <ng-template ngbNavContent>
+               <app-envoyerfacture></app-envoyerfacture>
+            </ng-template>
+        </li>
+    </ul>
+    <div [ngbNavOutlet]="nav" class="ml-4"></div>
+</div>
+

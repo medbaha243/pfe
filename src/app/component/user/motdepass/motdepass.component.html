@@ -1,0 +1,28 @@
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <div class="formlogin  card shadow-lg p-3 mb-5 bg-white"
+                 style="background-image: url('../../../../assets/images/background.png');">
+                <div class="myheader text-center pt-4">
+                    <h2 class="mytext">changer le mot de passe</h2>
+                </div>
+                <div class="card-body">
+                    <form #EducForm="ngForm" (ngSubmit)="newpassword()">
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="mot de passe"
+                                   aria-describedby="emailHelp" required [(ngModel)]="model.password" name="password">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="conform" placeholder="confirmer mot de passe" required
+                                   [(ngModel)]="model.conform">
+                        </div>
+                        <div class="col-sm-12 col-md-6 text-right myposition" >
+                            <button class="btn1 btn-block bg-try2" [disabled]="EducForm.invalid">Enregistrer
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

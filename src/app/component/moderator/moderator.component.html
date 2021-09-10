@@ -1,0 +1,34 @@
+<div class="row">
+    <!-- column -->
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">liste de facture à livrer </h4>
+                <div class="table-responsive">
+                    <table class="table user-table">
+                        <thead>
+                        <tr>
+                            <th class="border-top-0">#</th>
+                            <th class="border-top-0">ID Facture</th>
+                            <th class="border-top-0">Nom d'utilisateur</th>
+                            <th class="border-top-0">Adresse</th>
+                            <th class="border-top-0">Date</th>
+                            <th class="border-top-0"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let emp of list; let i = index">
+                            <td>{{i + 1}}</td>
+                            <td>{{emp.idFacture}}</td>
+                            <td>{{emp.nom}}</td>
+                            <td>{{emp.adresse}}</td>
+                            <td> {{emp.date | date:'dd-MM-yyyy'}}</td>
+                            <td><button class="dwon" (click)="modif(emp.idFacture)"><img src="../../../assets/images/expedie.png" width="55" height="40"></button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

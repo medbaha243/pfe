@@ -1,0 +1,103 @@
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <div class="formlogin  card shadow-lg p-3 mb-5 bg-white"
+                 style="background-image: url('../../../../assets/images/background.png');">
+                <div class="myheader text-center pt-4">
+                    <h2 class="mytext" >Créer un compte</h2>
+                </div>
+                <div class="card-body">
+                    <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid" #f="ngForm" novalidate
+                          class="login100-form validate-form">
+                        <div class="mb-3"
+                             data-validate="Valid email is required: ex@abc.xyz">
+                            <input class="form-control" type="text" placeholder="nom d'utilisateur"
+                                   name="username"
+                                   [(ngModel)]="form.username">
+                            <span class="focus-form-control"></span>
+                            <span class="symbol-form-control">
+                                <i class="fa fa-user-circle" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <div class="wrap-form-control validate-input"
+                             data-validate="Valid email is required: ex@abc.xyz">
+                            <input class="form-control" type="text" name="email" placeholder="Email"
+                                   name="email"
+                                   [(ngModel)]="form.email"
+                                   required
+                                   email
+                                   #email="ngModel">
+                            <span class="focus-form-control"></span>
+                            <span class="symbol-form-control">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+                        </div>
+                        <div class="wrap-form-control validate-input" data-validate="Password is required">
+                            <input class="form-control" type="password" placeholder="mot de passe"
+                                   name="password"
+                                   [(ngModel)]="form.password">
+                            <span class="focus-form-control"></span>
+                            <span class="symbol-form-control">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+                        </div>
+                        <div class="wrap-form-control validate-input">
+                            <input class="form-control" type="text" placeholder="Adress"
+                                   name="adress"
+                                   [(ngModel)]="form.adress">
+                            <span class="focus-form-control"></span>
+                            <span class="symbol-form-control">
+                                <i class="fa fa-telegram" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <div class="wrap-form-control validate-input">
+                            <input class="form-control" type="text" placeholder="region"
+                                   name="region"
+                                   [(ngModel)]="form.region">
+                            <span class="focus-form-control"></span>
+                            <span class="symbol-form-control">
+                                <i class="fa fa-telegram" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <div class="wrap-form-control validate-input">
+                            <input class="form-control" type="text" placeholder="age"
+                                   name="age"
+                                   [(ngModel)]="form.age">
+                            <span class="focus-form-control"></span>
+                            <span class="symbol-form-control">
+                                <i class="fa fa-telegram" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <div class="wrap-form-control validate-input">
+                            <input class="form-control" type="text" placeholder="num"
+                                   name="num"
+                                   [(ngModel)]="form.num">
+                            <span class="focus-form-control"></span>
+                            <span class="symbol-form-control">
+                                <i class="fa fa-phone-square" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <div class="col-sm-12 col-md-6 text-right myposition">
+                            <button class="btn1 btn-block bg-try2" (click)="onClick()">
+                                Créer un compte
+                            </button>
+                        </div>
+                        <div class="text-center p-t-136">
+                            <a class="mytext" [routerLink]="'/signin'">
+                                connexion
+                                <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+                            Signup failed!<br/>{{ errorMessage }}
+                        </div>
+                        <div class="alert alert-success" *ngIf="isSuccessful">
+                            Your registration is successful!
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

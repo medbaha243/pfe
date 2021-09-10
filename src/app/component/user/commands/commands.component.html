@@ -1,0 +1,77 @@
+<div class="text-center" *ngIf="list.length === 0 "> <img src="../../../../assets/images/product.svg"></div>
+<mat-grid-list *ngIf="list != null" cols="2">
+    <mat-grid-tile class="mymat" *ngFor="let item of list">
+
+        <table class="table">
+            <thead>
+            <tr class="header bg-try7">
+                <th scope="col" [colSpan]="7">id du commande:<br>{{item.idFacture}}</th>
+            </tr>
+            </thead>
+            <thead>
+            <tr class="header bg-try7">
+                <th scope="col" [colSpan]="7">votre adress:<br>{{item.adresse}}</th>
+            </tr>
+            </thead>
+            <thead>
+            <tr class="header bg-try7">
+                <th scope="col">Produit</th>
+                <th scope="col">Prix HT</th>
+                <th scope="col">TVA%</th>
+                <th scope="col">TVA</th>
+                <th scope="col">Prix TTC</th>
+                <th scope="col">QT</th>
+                <th scope="col"><b>Total</b></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let emp of item.produits">
+                <th scope="row">{{emp.nameprduits}}</th>
+                <td>{{emp.prixprduitsHT}}</td>
+                <td>19</td>
+                <td>{{emp.prixprduitsTVA}}</td>
+                <td>{{emp.prixprduits}}</td>
+                <td>{{emp.quantitep}}</td>
+                <td>{{emp.quantitep}}</td>
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>livraison</td>
+                <td>7 DT</td>
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>TVA</td>
+                <td>{{item.totaltva}}</td>
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Total HT</td>
+                <td>{{item.totalht}}</td>
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><h4><b>TOTAL</b></h4></td>
+                <td>{{item.total}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </mat-grid-tile>
+</mat-grid-list>
+

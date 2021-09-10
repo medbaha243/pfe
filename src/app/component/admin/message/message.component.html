@@ -1,0 +1,39 @@
+<main class="content">
+    <div class="container p-0">
+        <div class="card">
+            <div class="row g-0">
+                <div class="col-12 col-lg-7 col-xl-9">
+                    <div class="position-relative">
+                        <div class="chat-messages p-4" *ngFor="let emp of feed">
+                            <div class="chat-message-left pb-4">
+                                <div class="flex-shrink-1  py-2 px-3 ml-3">
+                                    <table>
+                                        <tr>
+                                            <td><p class="mytext">{{emp.usernamefeed}}</td> <td>
+
+                                            <div>
+                                                <button class="btn2 btn-sm" (click)="delletemsg(emp)">
+                                                   <img src="../../../../assets/images/remove.png" width="60" height="25">
+                                                </button>
+                                            </div>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                            <td> <div class="text-muted small text-nowrap mt-2">{{emp.date }}</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{emp.emailfeed}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{emp.message}}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

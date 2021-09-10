@@ -1,0 +1,37 @@
+<div class="row">
+    <!-- column -->
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">total d'argent gagne {{x}}DT </h4>
+                <div class="table-responsive">
+                    <table class="table user-table">
+                        <thead>
+                        <tr>
+                            <th class="border-top-0">#</th>
+                            <th class="border-top-0">ID du Facture</th>
+                            <th class="border-top-0">Nom du utilisateur</th>
+                            <th class="border-top-0">Monton</th>
+                            <th class="border-top-0">statu</th>
+                            <th class="border-top-0">date</th>
+                            <th class="border-top-0"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let emp of list; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{emp.idFacture}}</td>
+                            <td>{{emp.nom}}</td>
+                            <td>{{emp.total}}DT</td>
+                            <td *ngIf="emp.statu">Comande livre</td>
+                            <td *ngIf="!emp.statu">Comande no livre</td>
+                            <td> {{emp.date | date:'dd-MM-yyyy'}}</td>
+                            <td><button class="dwon"(click)="facturepdf(emp.idFacture)"><img src="../../../../assets/images/pdf-file.png" width="35" height="40"></button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,119 @@
+
+<div id="ProductSection-product-template"
+   class="product-template__container prstyle1">
+  <div class="product-single">
+      <div class="row" *ngFor="let emp of cart">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+              <div class="product-details-img">
+                  <div class="pl-20">
+                      <img class="img_prod"
+                           data-src="assets/images/product-images/product-image25-1.jpg"
+                           src="../../../../../assets/images/product-images/{{emp.nameprduits}}.png"
+                           alt="image"
+                           title="product"/>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-12"  >
+              <div class="product-single__meta">
+                  <h2 class="product-single__title">Product Quick
+                      View
+                      Popup</h2>
+                  <div class="prInfoRow">
+                      <div class="product-stock"><span
+                              class="instock ">In Stock</span>
+                      </div>
+                  </div>
+                  <p class="product-single__price product-single__price-product-template">
+                      Prix :{{emp.prixprduits}}DT
+                  </p>
+                  <div class="product-single__description rte">
+                      {{emp.discription}}
+                  </div>
+                  <form method="post"
+                        action="http://annimexweb.com/cart/add"
+                        id="product_form_10508262282"
+                        accept-charset="UTF-8"
+                        class="product-form product-form-product-template hidedropdown"
+                        enctype="multipart/form-data">
+                      <div class="swatch clearfix swatch-0 option1"
+                           data-option-index="0">
+                          <div class="product-form__item">
+                              <label class="header">Color: <span
+                                      class="slVariant">Red</span></label>
+                              <div data-value="Red"
+                                   class="swatch-element color red available">
+                                  <input class="swatchInput"
+                                         id="swatch-0-red"
+                                         type="radio" name="option-0"
+                                         value="Red">
+                                  <label class="swatchLbl color medium rectangle"
+                                         for="swatch-0-red"
+                                         style="background-image:url(assets/images/product-detail-page/variant1-1.jpg);"
+                                         title="Red"></label>
+                              </div>
+                              <div data-value="Blue"
+                                   class="swatch-element color blue available">
+                                  <input class="swatchInput"
+                                         id="swatch-0-blue"
+                                         type="radio" name="option-0"
+                                         value="Blue">
+                                  <label class="swatchLbl color medium rectangle"
+                                         for="swatch-0-blue"
+                                         style="background-image:url(assets/images/product-detail-page/variant1-2.jpg);"
+                                         title="Blue"></label>
+                              </div>
+                              <div data-value="Green"
+                                   class="swatch-element color green available">
+                                  <input class="swatchInput"
+                                         id="swatch-0-green"
+                                         type="radio" name="option-0"
+                                         value="Green">
+                                  <label class="swatchLbl color medium rectangle"
+                                         for="swatch-0-green"
+                                         style="background-image:url(assets/images/product-detail-page/variant1-3.jpg);"
+                                         title="Green"></label>
+                              </div>
+                              <div data-value="Gray"
+                                   class="swatch-element color gray available">
+                                  <input class="swatchInput"
+                                         id="swatch-0-gray"
+                                         type="radio" name="option-0"
+                                         value="Gray">
+                                  <label class="swatchLbl color medium rectangle"
+                                         for="swatch-0-gray"
+                                         style="background-image:url(assets/images/product-detail-page/variant1-4.jpg);"
+                                         title="Gray"></label>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Product Action -->
+                      <div class="product-action clearfix">
+                          <div class="product-form__item--quantity">
+                              <div class="wrapQtyBtn">
+                                  <div class="qtyField">
+
+                                      <input type="number"
+                                             id="Quantity"
+                                             name="quantity" value="1"
+                                             class="product-form__input qty "
+                                             style="width: 50px">quantity
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="product-form__item--submit">
+                              <button type="button" name="add"
+                                      class="btn btn-secondary">
+                                  <span>Add to cart</span>
+                              </button>
+                          </div>
+                      </div>
+                      <!-- End Product Action -->
+                  </form>
+              </div>
+          </div>
+      </div>
+
+      <!-- End-product-single-->
+  </div>
+ </div>

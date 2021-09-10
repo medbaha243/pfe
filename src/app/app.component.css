@@ -1,0 +1,10 @@
+.container{
+    margin-top: 56px;
+    min-height: 700px;
+}
+*{
+    font-family:Montserrat, sans-serif;
+    font-weight: bolder;
+    font-size: 12px;
+
+}

@@ -1,0 +1,77 @@
+<div class="facture">
+<div class="row facture-header">
+    <img src="../../../../assets/images/slideshow-banners/logo.png" height="30">
+</div>
+<div>
+    <br>
+    nom et prenom:<br>
+    nom d'utilisateur:<br>
+    CIN:<br>
+    Adress:<br>
+    tel:<br>
+    siege:<br><br>
+</div>
+<div class="row">
+    <table class="table">
+        <thead>
+        <tr class="header bg-try3">
+            <th scope="col">Produit</th>
+            <th scope="col">Prix HT</th>
+            <th scope="col">TVA%</th>
+            <th scope="col">TVA</th>
+            <th scope="col">Prix TTC</th>
+            <th scope="col">QT</th>
+            <th scope="col"><b>Total</b></th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of cart">
+            <th scope="row">{{item.nameprduits}}</th>
+            <td>{{item.prixprduits/1.19| number:'1.1-3'}}</td>
+            <td>19</td>
+            <td>{{item.prixprduits-(item.prixprduits/1.19)| number:'1.1-3'}}</td>
+            <td>{{item.prixprduits}}</td>
+            <td>{{item.quantitep}}</td>
+            <td>{{item.prixprduits * item.quantitep}}</td>
+        </tr>
+        <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>livraison</td>
+            <td>7 DT</td>
+        </tr>
+        <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>TVA</td>
+            <td>{{cartTotal-(cartTotal/1.19)| number:'1.1-3'}}DT</td>
+        </tr>
+        <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Total HT</td>
+            <td>{{cartTotal/1.19| number:'1.1-3'}}DT</td>
+        </tr>
+        <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><h4><b>TOTAL</b></h4></td>
+            <td>{{cartTotal+7}}DT</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</div>

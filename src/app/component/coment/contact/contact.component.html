@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="row">
+        <div class="mycol align-self-start">
+            <div class="contact-row"><i class="fa fa-map-marker" hei></i>La Marsa, TUNIS</div><br>
+            <div class="contact-row">216 99 77 00 65</div><br>
+            <div class="contact-row">contact@educart.tn</div><br>
+        </div>
+        <div class="mycol1 align-self-center">
+            <form  name="form"
+                   (ngSubmit)="f.form.valid"
+                   #f="ngForm"
+                   novalidate
+                   class="login100-form validate-form">
+                <div class="mb-3">
+                    <input class="form-control" type="email" name="email" ngModel email placeholder="Email"
+                           [(ngModel)]="form.email"
+                           required
+                           #email="ngModel">
+                    <span class="focus-form-control"></span>
+                    <span class="symbol-form-control">
+							<i class="fa fa-user-circle" aria-hidden="true"></i>
+						</span>
+                    <div
+                            class="alert alert-danger"
+                            role="alert"
+                            *ngIf="username.errors && f.submitted"
+                    >
+                        Username is required!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" type="text" name="username" placeholder="Username"
+                           [(ngModel)]="form.username"
+                           required
+                           #username="ngModel">
+                    <span class="focus-form-control"></span>
+                    <span class="symbol-form-control">
+							<i class="fa fa-user-circle" aria-hidden="true"></i>
+						</span>
+                    <div
+                            class="alert alert-danger"
+                            role="alert"
+                            *ngIf="username.errors && f.submitted"
+                    >
+                        Username is required!
+                    </div>
+                </div>
+                <div class="mb-3">
+                     <textarea class="form-control" type="text" name="message" placeholder="message"
+                               [(ngModel)]="form.message"
+                               required
+                               minlength="6"
+                               #message="ngModel"></textarea>
+                    <div
+                            class="alert alert-danger"
+                            role="alert"
+                            *ngIf="username.errors && f.submitted"
+                    >
+                        ecrire votre message
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 text-right myposition">
+                    <button class="btn1 btn-block bg-try2">Continue
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col align-self-end">
+            One of three columns
+        </div>
+    </div>
+</div>

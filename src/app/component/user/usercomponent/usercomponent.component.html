@@ -1,0 +1,92 @@
+<mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Profil">
+        <div class="limiter">
+            <div class="container-login100">
+                <div class="wrap-login100">
+                    <div class="formlogin  card shadow-lg p-3 mb-5 bg-white"
+                         style="background-image: url('../../../../assets/images/background.png');">
+                        <div class="myheader text-center pt-4">
+                            <h2 class="mytext">modifier le profil</h2>
+                        </div>
+                        <div class="card-body">
+                            <form
+                                    name="form"
+                                    (ngSubmit)="f.form.valid && newprofile()"
+                                    #f="ngForm"
+                                    novalidate
+                                    class="login100-form validate-form">
+                                <div class="p-3 py-5">
+
+                                    <div class="row mt-2">
+                                        <input type="text" class="form-control"
+                                               placeholder="{{username1}}"
+                                               name="username"
+                                               [(ngModel)]="userprofil.username"
+                                               required
+                                               #username="ngModel">
+                                        <div
+                                                class="alert alert-danger"
+                                                role="alert"
+                                                *ngIf="username.errors && f.submitted"
+                                        >
+                                            username is required!
+                                        </div>
+
+                                    </div>
+                                    <div class="row mt-3">
+                                        <input type="text" class="form-control" placeholder="{{email1}}"
+                                               name="email"
+                                               [(ngModel)]="userprofil.email"
+                                               required
+                                               #emailfeed="ngModel">
+                                        <div
+                                                class="alert alert-danger"
+                                                role="alert"
+                                                *ngIf="emailfeed.errors && f.submitted"
+                                        >
+                                            email is required!
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <input type="text" class="form-control" placeholder="{{num1}}" name="num"
+                                           [(ngModel)]="userprofil.num" required #numfeed="ngModel">
+                                    <div class="alert alert-danger" role="alert" *ngIf="numfeed.errors && f.submitted">
+                                        numero de telephon is required!
+                                    </div>
+
+                                    <br>
+                                    <div class="row mt-3">
+
+                                        <input type="text" class="form-control" placeholder="{{adress1}}" name="adress"
+                                               [(ngModel)]="userprofil.adress" required #adressfeed="ngModel"></div>
+                                    <div class="alert alert-danger" role="alert"
+                                         *ngIf="adressfeed.errors && f.submitted">
+                                        adress de telephon is required!
+                                    </div>
+                                    <br>
+                                    <div class="container-login100-form-btn">
+                                        <button class="btn3 btn-block bg-try2">
+                                            Valider
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </mat-tab>
+    <mat-tab label="Rétroaction">
+        <app-feedback></app-feedback>
+    </mat-tab>
+    <mat-tab label="Changer mot de passe">
+        <app-motdepass></app-motdepass>
+    </mat-tab>
+    <mat-tab label="Mes commandes">
+        <app-commands></app-commands>
+    </mat-tab>
+</mat-tab-group>

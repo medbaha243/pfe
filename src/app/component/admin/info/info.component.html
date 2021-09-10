@@ -1,0 +1,33 @@
+<div class="row">
+    <!-- column -->
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Table des utilisateurs </h4>
+                <h6 class="card-subtitle">nombre d'utilisateurs <code>.table</code></h6>
+                <div class="table-responsive">
+                    <table class="table user-table">
+                        <thead>
+                        <tr>
+                            <th class="border-top-0">#</th>
+                            <th class="border-top-0">username</th>
+                            <th class="border-top-0">email</th>
+                            <th class="border-top-0">adress</th>
+                            <th class="border-top-0">num</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let emp of list; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{emp.username}}</td>
+                            <td>{{emp.email}}</td>
+                            <td>{{emp.adress}}</td>
+                            <td>{{emp.num}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

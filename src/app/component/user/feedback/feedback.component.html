@@ -1,0 +1,82 @@
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <div class="formlogin  card shadow-lg p-3 mb-5 bg-white"
+                 style="background-image: url('../../../../assets/images/background.png');">
+                <div class="myheader text-center pt-4">
+                    <h2 class="mytext">contacter nous</h2>
+                </div>
+                <div class="card-body">
+                    <form
+                            name="form"
+                            (ngSubmit)="f.form.valid && onClick()"
+                            #f="ngForm"
+                            novalidate
+                            class="login100-form validate-form">
+                        <div class="wrap-form-control validate-input"
+                             data-validate="Valid email is required: ex@abc.xyz">
+                            <input class="form-control" type="text" name="username" placeholder="nom"
+                                   [(ngModel)]="feed.usernamefeed"
+                                   required
+                                   #username="ngModel">
+                            <span class="focus-form-control"></span>
+                            <span class="symbol-form-control">
+							<i class="fa fa-user-circle" aria-hidden="true"></i>
+						</span>
+                            <div
+                                    class="alert alert-danger"
+                                    role="alert"
+                                    *ngIf="username.errors && f.submitted"
+                            >
+                                Username is required!
+                            </div>
+                        </div>
+                        <div class="wrap-form-control validate-input"
+                             data-validate="Valid email is required: ex@abc.xyz">
+                            <input class="form-control" type="text" name="email" placeholder="email"
+                                   [(ngModel)]="feed.emailfeed"
+                                   required
+                                   #emailfeed="ngModel">
+                            <span class="focus-form-control"></span>
+                            <span class="symbol-form-control">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+                            <div
+                                    class="alert alert-danger"
+                                    role="alert"
+                                    *ngIf="username.errors && f.submitted"
+                            >
+                                Username is required!
+                            </div>
+                        </div>
+                        <div class="wrap-form-control validate-input" data-validate="Password is required">
+                    <textarea class="form-control" type="text" name="message" placeholder="message"
+                              [(ngModel)]="feed.message"
+                              required
+                              minlength="6"
+                              #message="ngModel"></textarea>
+                            <span class="focus-form-control"></span>
+                            <span class="symbol-form-control">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+                            <div
+                                    class="alert alert-danger"
+                                    role="alert"
+                                    *ngIf="message.errors && f.submitted"
+                            >
+                                <div *ngIf="message.errors.required">ecrire vatre message</div>
+                            </div>
+
+                        </div>
+
+                        <div class="container-login100-form-btn">
+                            <button class="btn3 btn-block bg-try2">
+                                Envoyer
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

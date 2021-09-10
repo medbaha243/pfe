@@ -1,0 +1,8 @@
+.foto:hover{
+    transform: scale(2);
+}
+.foto{
+    align-content: center;
+}
+.wrap-blog-inner{
+background-color: #d9ffff;}

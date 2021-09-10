@@ -1,0 +1,24 @@
+.container{
+    background-image: url("../../../../assets/images/contact-us.png");
+}
+.contact-row{
+    background: rgba(250,250,250,0.25);
+    border-radius: 1rem;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+.mycol{
+    width: 250px;
+    margin: 200px 30px;
+    background: transparent;
+}
+.mycol1{
+    width: 350px;
+    margin: 450px 30px;
+    background: transparent;
+}
+.form-control{
+    background-color: rgba(250,250,250,0.25);
+}
